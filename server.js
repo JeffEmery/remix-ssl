@@ -5,7 +5,6 @@ const https = require('https')
 const http = require('http')
 const compression = require('compression')
 const morgan = require('morgan')
-const helmet = require('helmet')
 const { createRequestHandler } = require('@remix-run/express')
 
 const BUILD_DIR = path.join(process.cwd(), 'build')
@@ -19,9 +18,6 @@ app.use(compression())
 
 // http://expressjs.com/en/advanced/best-practice-security.html#at-a-minimum-disable-x-powered-by-header
 app.disable('x-powered-by')
-
-// http://expressjs.com/en/advanced/best-practice-security.html#use-helmet
-app.use(helmet())
 
 // Remix fingerprints its assets so we can cache forever.
 app.use(

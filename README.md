@@ -5,8 +5,8 @@ Server"
 
 ### Packages added for the Express server
 
-- [Helmet](https://helmetjs.github.io/)
-- [dotenv](https://github.com/motdotla/dotenv#readme)
+- [dotenv](https://github.com/motdotla/dotenv#readme) to read in the `.env` file
+  variables
 
 ### Configuration
 
