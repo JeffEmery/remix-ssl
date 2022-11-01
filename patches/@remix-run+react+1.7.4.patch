@@ -1,0 +1,15 @@
+diff --git a/node_modules/@remix-run/react/dist/components.js b/node_modules/@remix-run/react/dist/components.js
+index e8d6f59..dce4ca3 100644
+--- a/node_modules/@remix-run/react/dist/components.js
++++ b/node_modules/@remix-run/react/dist/components.js
+@@ -1131,8 +1131,8 @@ const LiveReload = process.env.NODE_ENV !== "development" ? () => null : functio
+     dangerouslySetInnerHTML: {
+       __html: js`
+                 function remixLiveReloadConnect(config) {
+-                  let protocol = location.protocol === "https:" ? "wss:" : "ws:";
+-                  let host = location.hostname;
++                  let protocol = "ws:"; // location.protocol === "https:" ? "wss:" : "ws:";
++                  let host = "localhost"; // location.hostname;
+                   let socketPath = protocol + "//" + host + ":" + ${String(port)} + "/socket";
+ 
+                   let ws = new WebSocket(socketPath);
